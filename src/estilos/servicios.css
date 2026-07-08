@@ -1,0 +1,225 @@
+.servicios-page {
+  padding: 40px 0 60px;
+  background: linear-gradient(180deg, #F7FFFD 0%, #FFFFFF 100%);
+  min-height: calc(100vh - 70px - 250px);
+}
+
+/* ===== HEADER ===== */
+.servicios-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.servicios-titulo {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-texto);
+  margin-bottom: 12px;
+}
+
+.servicios-icono {
+  font-size: 1.4rem;
+  margin-right: 6px;
+}
+
+.servicios-subtitulo {
+  font-size: 1rem;
+  color: var(--color-texto);
+  opacity: 0.6;
+  max-width: 600px;
+  margin: 0 auto 18px;
+  line-height: 1.6;
+}
+
+.servicios-linea {
+  width: 70px;
+  height: 4px;
+  background-color: var(--color-primario);
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+/* ===== GRID ===== */
+.servicios-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.servicios-grid .tarjeta {
+  width: calc((100% - 50px) / 3);
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicios-grid .tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.servicios-grid .tarjeta-imagen {
+  height: 180px;
+}
+
+.servicios-grid .tarjeta-cuerpo {
+  padding: 16px;
+}
+
+.servicios-grid .tarjeta-titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.servicios-grid .tarjeta-descripcion {
+  font-size: 0.82rem;
+  margin-bottom: 16px;
+  opacity: 0.65;
+  line-height: 1.5;
+}
+
+/* ===== DOCTORES ===== */
+.doctores-seccion {
+  margin-top: 50px;
+}
+
+.doctores-titulo {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-texto);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.doctores-seccion .servicios-subtitulo {
+  margin-bottom: 18px;
+}
+
+.doctores-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 25px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px auto 0;
+}
+
+.doctores-grid .tarjeta {
+  width: calc((100% - 75px) / 4);
+  min-width: 220px;
+}
+
+.doctores-grid .tarjeta {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctores-grid .tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.doctores-grid .tarjeta-imagen {
+  height: 180px;
+}
+
+.doctores-grid .tarjeta-cuerpo {
+  padding: 16px;
+}
+
+.doctores-grid .tarjeta-titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.doctores-grid .tarjeta-subtitulo {
+  font-size: 0.85rem;
+  color: var(--color-primario);
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+/* ===== BOTÓN ===== */
+.btn-reservar {
+  padding: 12px 20px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  background-color: var(--color-primario) !important;
+  box-shadow: none !important;
+  width: 100%;
+}
+
+.btn-reservar:hover {
+  background-color: var(--color-hover) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ===== SWEETALERT ===== */
+.swal-servicio {
+  border-radius: 12px !important;
+  font-family: var(--font-principal) !important;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .doctores-grid .tarjeta {
+    width: calc((100% - 25px) / 2);
+  }
+}
+
+@media (max-width: 768px) {
+  .servicios-grid .tarjeta {
+    width: calc((100% - 25px) / 2);
+  }
+
+  .servicios-titulo,
+  .doctores-titulo {
+    font-size: 24px;
+  }
+
+  .servicios-subtitulo {
+    font-size: 0.9rem;
+  }
+
+  .doctores-grid {
+    gap: 20px;
+  }
+
+  .doctores-grid .tarjeta {
+    width: calc((100% - 25px) / 2);
+  }
+}
+
+@media (max-width: 480px) {
+  .servicios-grid .tarjeta {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .servicios-page {
+    padding: 25px 0 40px;
+  }
+
+  .servicios-header {
+    margin-bottom: 28px;
+  }
+
+  .servicios-titulo,
+  .doctores-titulo {
+    font-size: 22px;
+  }
+
+  .doctores-grid .tarjeta {
+    width: 100%;
+    max-width: 360px;
+  }
+}

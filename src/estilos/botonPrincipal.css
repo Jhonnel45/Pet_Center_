@@ -1,0 +1,25 @@
+.btn-principal {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(21, 156, 179, 0.3);
+}
+
+.btn-principal:hover {
+  background-color: var(--color-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(21, 156, 179, 0.4);
+}
+
+.btn-principal:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,13 @@
+:root {
+  --color-primario: #159CB3;
+  --color-secundario: #C1FFF3;
+  --color-hover: #0D7D91;
+  --color-fondo: #F7FFFD;
+  --color-blanco: #FFFFFF;
+  --color-texto: #2C2C2C;
+  --color-borde: #E5E5E5;
+  --color-precio: #E53935;
+  --color-testimonio: #159CB3;
+  --color-boton-primario: #159CB3;
+  --font-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

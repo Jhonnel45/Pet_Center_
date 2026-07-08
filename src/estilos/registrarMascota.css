@@ -1,0 +1,129 @@
+.registrar-mascota {
+  background: linear-gradient(180deg, #F7FFFD 0%, #FFFFFF 100%);
+  padding: 40px 0;
+  min-height: calc(100vh - 70px - 250px);
+}
+
+.registrar-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.registrar-titulo {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-texto);
+  margin-bottom: 10px;
+}
+
+.registrar-descripcion {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.registrar-linea {
+  width: 70px;
+  height: 4px;
+  background-color: var(--color-primario);
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.registrar-formulario {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: var(--color-blanco);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.registrar-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.registrar-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.registrar-input,
+.registrar-select {
+  height: 48px;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 0 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--color-texto);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.registrar-input:focus,
+.registrar-select:focus {
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(21, 156, 179, 0.15);
+}
+
+.registrar-fila {
+  display: flex;
+  gap: 16px;
+}
+
+.registrar-boton {
+  width: 100%;
+  padding: 14px 24px;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registrar-boton:hover {
+  background-color: var(--color-hover);
+}
+
+@media (max-width: 768px) {
+  .registrar-titulo {
+    font-size: 24px;
+  }
+
+  .registrar-formulario {
+    padding: 24px;
+  }
+
+  .registrar-fila {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .registrar-mascota {
+    padding: 20px 0;
+  }
+
+  .registrar-titulo {
+    font-size: 22px;
+  }
+
+  .registrar-formulario {
+    padding: 20px;
+    gap: 20px;
+  }
+}

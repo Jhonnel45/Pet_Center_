@@ -1,0 +1,153 @@
+.modificar-cita {
+  background: linear-gradient(180deg, #F7FFFD 0%, #FFFFFF 100%);
+  padding: 60px 0;
+  min-height: calc(100vh - 70px - 250px);
+}
+
+.modificar-contenido {
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.modificar-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.modificar-titulo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #2C2C2C;
+  margin-bottom: 16px;
+}
+
+.modificar-linea {
+  width: 70px;
+  height: 4px;
+  background-color: #159CB3;
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.modificar-tarjeta {
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+}
+
+.modificar-campo {
+  margin-bottom: 20px;
+}
+
+.modificar-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2C2C2C;
+  margin-bottom: 6px;
+}
+
+.modificar-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-family: inherit;
+  background-color: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  border-radius: 10px;
+  color: #2C2C2C;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modificar-input:focus {
+  outline: none;
+  border-color: #159CB3;
+  box-shadow: 0 0 0 3px rgba(21, 156, 179, 0.15);
+}
+
+.modificar-separador {
+  height: 1px;
+  background-color: #E5E7EB;
+  margin: 24px 0;
+}
+
+.modificar-horario {
+  margin-bottom: 24px;
+}
+
+.modificar-horario-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2C2C2C;
+  margin-bottom: 10px;
+}
+
+.modificar-horario-control {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.modificar-horario-boton {
+  padding: 10px 20px;
+  background-color: #159CB3;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modificar-horario-boton:hover {
+  background-color: #0D7D91;
+}
+
+.modificar-horario-hora {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2C2C2C;
+}
+
+.modificar-boton {
+  width: 100%;
+  padding: 14px;
+  background-color: #159CB3;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modificar-boton:hover {
+  background-color: #0D7D91;
+}
+
+@media (max-width: 768px) {
+  .modificar-cita {
+    padding: 40px 0;
+  }
+
+  .modificar-titulo {
+    font-size: 24px;
+  }
+
+  .modificar-tarjeta {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modificar-titulo {
+    font-size: 22px;
+  }
+}

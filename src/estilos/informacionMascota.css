@@ -1,0 +1,174 @@
+.info-mascota {
+  background: linear-gradient(180deg, #F7FFFD 0%, #FFFFFF 100%);
+  padding: 40px 0;
+  min-height: calc(100vh - 70px - 250px);
+}
+
+.info-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.info-titulo {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-texto);
+  margin-bottom: 10px;
+}
+
+.info-descripcion {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.info-linea {
+  width: 70px;
+  height: 4px;
+  background-color: var(--color-primario);
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.info-tarjeta {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: var(--color-blanco);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 35px;
+  margin-bottom: 32px;
+}
+
+.info-imagen {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 28px;
+}
+
+.info-columnas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.info-columna {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.info-etiqueta {
+  font-size: 0.95rem;
+  color: #888;
+}
+
+.info-valor {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-texto);
+  text-align: right;
+}
+
+.info-valor--activo {
+  color: #2E7D32;
+}
+
+.info-divisor {
+  height: 1px;
+  background-color: var(--color-borde);
+  margin: 14px 0;
+}
+
+.info-botones {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.info-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.info-btn:hover {
+  transform: translateY(-2px);
+}
+
+.info-btn-primario {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+}
+
+.info-btn-primario:hover {
+  background-color: var(--color-hover);
+}
+
+.info-btn-secundario {
+  background-color: #FF8A00;
+  color: var(--color-blanco);
+}
+
+.info-btn-secundario:hover {
+  background-color: #E67A00;
+}
+
+@media (max-width: 768px) {
+  .info-titulo {
+    font-size: 24px;
+  }
+
+  .info-tarjeta {
+    padding: 24px;
+  }
+
+  .info-columnas {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .info-imagen {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-mascota {
+    padding: 20px 0;
+  }
+
+  .info-titulo {
+    font-size: 22px;
+  }
+
+  .info-tarjeta {
+    padding: 20px;
+  }
+
+  .info-imagen {
+    height: 180px;
+  }
+
+  .info-botones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .info-btn {
+    width: 100%;
+  }
+}

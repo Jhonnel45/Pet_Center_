@@ -1,0 +1,28 @@
+.registro-container {
+  width: 520px;
+}
+
+.registro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.registro-grid .login-campo {
+  width: 100%;
+}
+
+.registro-grid .login-input {
+  padding: 0 14px 0 44px;
+}
+
+@media (max-width: 600px) {
+  .registro-container {
+    width: 100%;
+    max-width: 430px;
+  }
+
+  .registro-grid {
+    grid-template-columns: 1fr;
+  }
+}

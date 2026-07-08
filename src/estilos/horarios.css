@@ -1,0 +1,142 @@
+.horarios-page {
+  background: linear-gradient(180deg, #F7FFFD 0%, #FFFFFF 100%);
+  padding: 40px 0;
+  min-height: calc(100vh - 70px - 250px);
+}
+
+.horarios-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.horarios-titulo {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-texto);
+  margin-bottom: 10px;
+}
+
+.horarios-descripcion {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.horarios-linea {
+  width: 70px;
+  height: 4px;
+  background-color: var(--color-primario);
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.horarios-contenido {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.horarios-calendario {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--color-blanco);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.horarios-calendario-icono {
+  font-size: 2rem;
+}
+
+.horarios-calendario-label {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.horarios-calendario-fecha {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.horarios-lista {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 32px;
+}
+
+.horarios-item {
+  padding: 14px;
+  border: 1px solid var(--color-borde);
+  border-radius: 10px;
+  background-color: var(--color-blanco);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--color-texto);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.horarios-item:hover {
+  border-color: var(--color-primario);
+  box-shadow: 0 4px 12px rgba(21, 156, 179, 0.15);
+}
+
+.horarios-item--activo {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  border-color: var(--color-primario);
+}
+
+.horarios-item--activo:hover {
+  background-color: var(--color-hover);
+  border-color: var(--color-hover);
+}
+
+.horarios-boton {
+  width: 100%;
+  padding: 14px 24px;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.horarios-boton:hover {
+  background-color: var(--color-hover);
+}
+
+@media (max-width: 768px) {
+  .horarios-titulo {
+    font-size: 24px;
+  }
+
+  .horarios-lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .horarios-page {
+    padding: 20px 0;
+  }
+
+  .horarios-titulo {
+    font-size: 22px;
+  }
+
+  .horarios-lista {
+    grid-template-columns: 1fr;
+  }
+}

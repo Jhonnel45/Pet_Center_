@@ -1,0 +1,166 @@
+.pago-exitoso {
+  background: linear-gradient(180deg, #F7FFFD, #FFFFFF);
+  padding: 60px 0;
+  min-height: calc(100vh - 70px - 250px);
+}
+
+.exitoso-contenido {
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.exitoso-icono {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #28A745;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  animation: exitoso-aparecer 0.5s ease-out;
+}
+
+@keyframes exitoso-aparecer {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.exitoso-check {
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.exitoso-titulo {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-texto);
+  margin-bottom: 10px;
+}
+
+.exitoso-mensaje {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.exitoso-tarjeta {
+  background-color: var(--color-blanco);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 35px;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.exitoso-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.exitoso-etiqueta {
+  font-size: 0.95rem;
+  color: #888;
+}
+
+.exitoso-valor {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-texto);
+  text-align: right;
+}
+
+.exitoso-divisor {
+  height: 1px;
+  background-color: var(--color-borde);
+  margin: 14px 0;
+}
+
+.exitoso-botones {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.exitoso-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.exitoso-btn:hover {
+  transform: translateY(-2px);
+}
+
+.exitoso-btn-primario {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+}
+
+.exitoso-btn-primario:hover {
+  background-color: var(--color-hover);
+}
+
+.exitoso-btn-secundario {
+  background-color: #FF8A00;
+  color: var(--color-blanco);
+}
+
+.exitoso-btn-secundario:hover {
+  background-color: #E67A00;
+}
+
+@media (max-width: 768px) {
+  .pago-exitoso {
+    padding: 40px 0;
+  }
+
+  .exitoso-titulo {
+    font-size: 22px;
+  }
+
+  .exitoso-tarjeta {
+    padding: 24px;
+  }
+
+  .exitoso-fila {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .exitoso-valor {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .exitoso-botones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .exitoso-btn {
+    width: 100%;
+  }
+}

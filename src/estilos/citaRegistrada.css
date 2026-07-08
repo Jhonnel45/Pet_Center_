@@ -1,0 +1,170 @@
+.cita-registrada {
+  background: linear-gradient(180deg, #F7FFFD 0%, #FFFFFF 100%);
+  padding: 60px 0;
+  min-height: calc(100vh - 70px - 250px);
+}
+
+.registrada-contenido {
+  max-width: 550px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.registrada-icono {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #28A745;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  animation: registrada-aparecer 0.5s ease-out;
+}
+
+@keyframes registrada-aparecer {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.registrada-check {
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.registrada-titulo {
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--color-texto);
+  margin-bottom: 10px;
+}
+
+.registrada-mensaje {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.registrada-tarjeta {
+  background-color: var(--color-blanco);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 35px;
+  text-align: left;
+  margin-bottom: 32px;
+}
+
+.registrada-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.registrada-etiqueta {
+  font-size: 0.95rem;
+  color: #888;
+}
+
+.registrada-valor {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-texto);
+  text-align: right;
+}
+
+.registrada-valor--confirmada {
+  color: #2E7D32;
+}
+
+.registrada-divisor {
+  height: 1px;
+  background-color: var(--color-borde);
+  margin: 14px 0;
+}
+
+.registrada-botones {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.registrada-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.registrada-btn:hover {
+  transform: translateY(-2px);
+}
+
+.registrada-btn-primario {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+}
+
+.registrada-btn-primario:hover {
+  background-color: var(--color-hover);
+}
+
+.registrada-btn-secundario {
+  background-color: #FF8A00;
+  color: var(--color-blanco);
+}
+
+.registrada-btn-secundario:hover {
+  background-color: #E67A00;
+}
+
+@media (max-width: 768px) {
+  .cita-registrada {
+    padding: 40px 0;
+  }
+
+  .registrada-titulo {
+    font-size: 22px;
+  }
+
+  .registrada-tarjeta {
+    padding: 24px;
+  }
+
+  .registrada-fila {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .registrada-valor {
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .registrada-botones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .registrada-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,125 @@
+.agendar-cita {
+  background: linear-gradient(180deg, #F7FFFD 0%, #FFFFFF 100%);
+  padding: 40px 0;
+  min-height: calc(100vh - 70px - 250px);
+}
+
+.agendar-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.agendar-titulo {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-texto);
+  margin-bottom: 10px;
+}
+
+.agendar-descripcion {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+.agendar-linea {
+  width: 70px;
+  height: 4px;
+  background-color: var(--color-primario);
+  border-radius: 20px;
+  margin: 0 auto;
+}
+
+.agendar-formulario {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: var(--color-blanco);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.agendar-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.agendar-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.agendar-select,
+.agendar-textarea {
+  height: 48px;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  padding: 0 14px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--color-texto);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+.agendar-select:focus,
+.agendar-textarea:focus {
+  border-color: var(--color-primario);
+  box-shadow: 0 0 0 3px rgba(21, 156, 179, 0.15);
+}
+
+.agendar-textarea {
+  height: auto;
+  padding: 12px 14px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.agendar-boton {
+  width: 100%;
+  padding: 14px 24px;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.agendar-boton:hover {
+  background-color: var(--color-hover);
+}
+
+@media (max-width: 768px) {
+  .agendar-titulo {
+    font-size: 24px;
+  }
+
+  .agendar-formulario {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .agendar-cita {
+    padding: 20px 0;
+  }
+
+  .agendar-titulo {
+    font-size: 22px;
+  }
+
+  .agendar-formulario {
+    padding: 20px;
+    gap: 20px;
+  }
+}

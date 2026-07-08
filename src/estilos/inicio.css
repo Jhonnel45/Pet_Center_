@@ -1,0 +1,306 @@
+/* ===== BANNER ===== */
+.banner {
+  width: 100%;
+  padding: 0 20px;
+  margin-top: 0;
+}
+
+.banner .container {
+  padding: 0;
+}
+
+.banner-imagen {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* ===== SECCIONES ===== */
+.seccion-productos,
+.seccion-resenas,
+.seccion-localidades {
+  padding: 35px 0;
+}
+
+.titulo-seccion {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--color-texto);
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+/* ===== HEADER PRODUCTOS ===== */
+.productos-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.productos-linea {
+  width: 70px;
+  height: 4px;
+  background-color: var(--color-primario);
+  border-radius: 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.productos-huella {
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-fondo);
+  padding: 0 8px;
+  line-height: 1;
+}
+
+/* ===== PRODUCTOS ===== */
+.productos-lista {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.productos-lista .tarjeta {
+  width: 220px;
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productos-lista .tarjeta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+.productos-lista .tarjeta-imagen {
+  height: 200px;
+}
+
+.productos-lista .tarjeta-cuerpo {
+  padding: 14px;
+}
+
+.productos-lista .tarjeta-titulo {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.productos-lista .tarjeta-precio {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.productos-lista .tarjeta-descripcion {
+  display: none;
+}
+
+/* ===== TARJETA VER MÁS ===== */
+.tarjeta-ver-mas {
+  border: 2px dashed var(--color-primario);
+  border-radius: 14px;
+  background-color: var(--color-blanco);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ver-mas-contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.ver-mas-icono {
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--color-primario);
+  line-height: 1;
+}
+
+.ver-mas-texto {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-texto);
+  line-height: 1.4;
+}
+
+.btn-ver-mas {
+  padding: 10px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 8px;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: inherit;
+}
+
+.btn-ver-mas:hover {
+  background-color: var(--color-hover);
+}
+
+/* ===== BOTÓN AGREGAR ===== */
+.btn-agregar {
+  padding: 10px 20px !important;
+  font-size: 0.85rem !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  background-color: #FF8A00 !important;
+  box-shadow: none !important;
+  width: 100%;
+}
+
+.btn-agregar:hover {
+  background-color: #F57C00 !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* ===== RESEÑAS ===== */
+.resenas-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.resenas-grid .tarjeta-testimonio {
+  background-color: var(--color-testimonio);
+  border-radius: 10px;
+  width: 400px;
+  padding: 15px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.resenas-grid .tarjeta-testimonio .tarjeta-texto {
+  color: var(--color-blanco);
+  opacity: 1;
+  font-style: normal;
+  font-size: 0.9rem;
+}
+
+.resenas-grid .tarjeta-testimonio .tarjeta-autor {
+  color: var(--color-blanco);
+  opacity: 0.9;
+}
+
+.resenas-grid .tarjeta-avatar {
+  border: 2px solid var(--color-blanco);
+}
+
+/* ===== LOCALIDADES ===== */
+.localidades-grid {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.localidades-grid .tarjeta {
+  width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.localidades-grid .tarjeta-imagen {
+  height: 200px;
+}
+
+.localidades-grid .tarjeta-info {
+  text-align: center;
+  opacity: 0.75;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .productos-lista {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-imagen {
+    height: 200px;
+  }
+
+  .productos-lista {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .resenas-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resenas-grid .tarjeta-testimonio {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .localidades-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .localidades-grid .tarjeta {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .titulo-seccion {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-imagen {
+    height: 150px;
+  }
+
+  .seccion-productos,
+  .seccion-resenas,
+  .seccion-localidades {
+    padding: 25px 0;
+  }
+
+  .titulo-seccion {
+    font-size: 20px;
+    margin-bottom: 14px;
+  }
+
+  .productos-lista {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productos-lista .tarjeta {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .tarjeta-ver-mas {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 320px) {
+  .banner-imagen {
+    height: 120px;
+  }
+}

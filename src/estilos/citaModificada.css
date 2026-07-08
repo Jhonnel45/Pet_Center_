@@ -1,0 +1,103 @@
+.cita-modificada {
+  background: linear-gradient(180deg, #F7FFFD 0%, #FFFFFF 100%);
+  padding: 60px 0;
+  min-height: calc(100vh - 70px - 250px);
+}
+
+.modificada-contenido {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.modificada-tarjeta {
+  background-color: #FFFFFF;
+  border-radius: 18px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  position: relative;
+}
+
+.modificada-icono {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #47C777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+.modificada-check {
+  font-size: 2.2rem;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.modificada-titulo {
+  font-size: 32px;
+  font-weight: 700;
+  color: #47C777;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.modificada-mensaje {
+  font-size: 30px;
+  font-weight: 700;
+  color: #2C2C2C;
+  text-align: center;
+  margin-bottom: 32px;
+  line-height: 1.3;
+}
+
+.modificada-accion {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modificada-boton {
+  padding: 12px 28px;
+  background-color: #159CB3;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modificada-boton:hover {
+  background-color: #0D7D91;
+}
+
+@media (max-width: 768px) {
+  .cita-modificada {
+    padding: 40px 0;
+  }
+
+  .modificada-titulo {
+    font-size: 26px;
+  }
+
+  .modificada-mensaje {
+    font-size: 24px;
+  }
+
+  .modificada-tarjeta {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modificada-titulo {
+    font-size: 22px;
+  }
+
+  .modificada-mensaje {
+    font-size: 20px;
+  }
+}
