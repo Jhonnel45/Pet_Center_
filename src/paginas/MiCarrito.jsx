@@ -4,23 +4,56 @@ import '../estilos/miCarrito.css';
 
 function MiCarrito() {
   const navigate = useNavigate();
-  const [items, setItems] = useState(
-    () => JSON.parse(localStorage.getItem('carrito') || '[]')
-  );
 
-  const total = items.reduce((acc, item) => {
-    const precio = parseFloat(item.precio.replace('S/ ', '').replace(',', ''));
-    return acc + precio;
-  }, 0);
+  const inicializarCarrito = () => {
+    const carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
+    return carrito.map((item) => ({
+      ...item,
+      cantidad: item.cantidad || 1
+    }));
+  };
 
-  const formatearTotal = (valor) =>
-    'S/' + valor.toFixed(2);
+  const [items, setItems] = useState(inicializarCarrito);
+
+  const guardarCarrito = (nuevosItems) => {
+    localStorage.setItem('carrito', JSON.stringify(nuevosItems));
+    setItems(nuevosItems);
+  };
+
+  const parsePrecio = (precio) =>
+    parseFloat(precio.replace('S/ ', '').replace(',', ''));
+
+  const formatearPrecio = (valor) =>
+    'S/ ' + valor.toFixed(2);
+
+  const handleIncrementar = (id) => {
+    const actualizados = items.map((item) =>
+      item.id === id ? { ...item, cantidad: item.cantidad + 1 } : item
+    );
+    guardarCarrito(actualizados);
+  };
+
+  const handleDecrementar = (id) => {
+    const actualizados = items.map((item) =>
+      item.id === id && item.cantidad > 1
+        ? { ...item, cantidad: item.cantidad - 1 }
+        : item
+    );
+    guardarCarrito(actualizados);
+  };
 
   const handleEliminar = (id) => {
     const actualizados = items.filter((item) => item.id !== id);
-    setItems(actualizados);
-    localStorage.setItem('carrito', JSON.stringify(actualizados));
+    guardarCarrito(actualizados);
   };
+
+  const subtotal = items.reduce((acc, item) => {
+    const precio = parsePrecio(item.precio);
+    return acc + precio * (item.cantidad || 1);
+  }, 0);
+
+  const formatearTotal = (valor) =>
+    'S/ ' + valor.toFixed(2);
 
   if (items.length === 0) {
     return (
@@ -62,37 +95,56 @@ function MiCarrito() {
         </div>
 
         <div className="carrito-lista">
-          {items.map((producto) => (
-            <div key={producto.id} className="carrito-item">
-              <img
-                className="carrito-item-imagen"
-                src={producto.imagen}
-                alt={producto.titulo}
-              />
-              <div className="carrito-item-info">
-                <h3 className="carrito-item-nombre">{producto.titulo}</h3>
-                <button
-                  className="carrito-item-eliminar"
-                  onClick={() => handleEliminar(producto.id)}
-                >
-                  Eliminar
-                </button>
+          {items.map((producto) => {
+            const precioUnitario = parsePrecio(producto.precio);
+            const precioTotal = precioUnitario * (producto.cantidad || 1);
+            return (
+              <div key={producto.id} className="carrito-item">
+                <img
+                  className="carrito-item-imagen"
+                  src={producto.imagen}
+                  alt={producto.titulo}
+                />
+                <div className="carrito-item-info">
+                  <h3 className="carrito-item-nombre">{producto.titulo}</h3>
+                  <div className="carrito-cantidad">
+                    <button
+                      className="carrito-cantidad-btn"
+                      onClick={() => handleDecrementar(producto.id)}
+                    >
+                      −
+                    </button>
+                    <span className="carrito-cantidad-numero">{producto.cantidad}</span>
+                    <button
+                      className="carrito-cantidad-btn"
+                      onClick={() => handleIncrementar(producto.id)}
+                    >
+                      +
+                    </button>
+                  </div>
+                  <button
+                    className="carrito-item-eliminar"
+                    onClick={() => handleEliminar(producto.id)}
+                  >
+                    Eliminar
+                  </button>
+                </div>
+                <div className="carrito-item-precio">{formatearPrecio(precioTotal)}</div>
               </div>
-              <div className="carrito-item-precio">{producto.precio}</div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="carrito-resumen">
           <div className="carrito-resumen-tarjeta">
             <div className="carrito-resumen-fila">
               <span>Subtotal</span>
-              <span>{formatearTotal(total)}</span>
+              <span>{formatearTotal(subtotal)}</span>
             </div>
             <div className="carrito-resumen-divisor" />
             <div className="carrito-resumen-fila carrito-resumen-total">
               <span>Total</span>
-              <span>{formatearTotal(total)}</span>
+              <span>{formatearTotal(subtotal)}</span>
             </div>
           </div>
           <button

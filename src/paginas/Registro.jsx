@@ -71,10 +71,39 @@ function Registro() {
       return;
     }
 
+    const usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
+
+    const existe = usuarios.some((u) => u.correo === correo.trim().toLowerCase());
+    if (existe) {
+      Swal.fire({
+        icon: 'error',
+        title: 'El correo ya está registrado.',
+        text: 'Ya existe una cuenta con ese correo electrónico.',
+        confirmButtonText: 'Aceptar',
+        confirmButtonColor: '#0B8FA5',
+        customClass: { popup: 'swal-login' }
+      });
+      return;
+    }
+
+    const nuevoId = usuarios.length > 0 ? Math.max(...usuarios.map((u) => u.id)) + 1 : 1;
+
+    usuarios.push({
+      id: nuevoId,
+      nombre: nombre.trim(),
+      apellido: apellido.trim(),
+      correo: correo.trim().toLowerCase(),
+      telefono: telefono.trim(),
+      dni: dni.trim(),
+      direccion: direccion.trim(),
+      password: password
+    });
+
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
     Swal.fire({
       icon: 'success',
-      title: 'Registro completado',
-      text: 'Tu cuenta ha sido creada correctamente.',
+      title: 'Registro exitoso.',
       confirmButtonText: 'Aceptar',
       confirmButtonColor: '#0B8FA5',
       customClass: { popup: 'swal-login' }

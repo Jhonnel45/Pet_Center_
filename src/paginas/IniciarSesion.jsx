@@ -22,12 +22,16 @@ function IniciarSesion() {
       return;
     }
 
-    if (email !== 'cliente@petcenter.com' || password !== '123456') {
+    const usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
+    const usuarioEncontrado = usuarios.find(
+      (u) => u.correo === email.trim().toLowerCase() && u.password === password
+    );
+
+    if (!usuarioEncontrado) {
       Swal.fire({
         icon: 'error',
-        title: 'Usuario o contraseña incorrectos.',
-        text: 'Utilice el usuario de prueba.\nCorreo: cliente@petcenter.com\nContraseña: 123456',
-        confirmButtonText: 'Entendido',
+        title: 'Correo o contraseña incorrectos.',
+        confirmButtonText: 'Aceptar',
         customClass: { popup: 'swal-login' }
       });
       return;
@@ -36,15 +40,15 @@ function IniciarSesion() {
     localStorage.setItem(
       'usuario',
       JSON.stringify({
-        nombre: 'Cliente',
-        correo: 'cliente@petcenter.com'
+        id: usuarioEncontrado.id,
+        nombre: usuarioEncontrado.nombre,
+        correo: usuarioEncontrado.correo
       })
     );
 
     Swal.fire({
       icon: 'success',
-      title: 'Bienvenido.',
-      text: 'Inicio de sesión exitoso.',
+      title: 'Bienvenido ' + usuarioEncontrado.nombre + '.',
       confirmButtonText: 'Ir al inicio',
       customClass: { popup: 'swal-login' }
     }).then(() => {
